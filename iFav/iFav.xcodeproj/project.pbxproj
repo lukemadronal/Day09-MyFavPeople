@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		011BBB051BBDB29300FCEE20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB041BBDB29300FCEE20 /* main.m */; };
+		011BBB081BBDB29300FCEE20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB071BBDB29300FCEE20 /* AppDelegate.m */; };
+		011BBB0B1BBDB29300FCEE20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB0A1BBDB29300FCEE20 /* ViewController.m */; };
+		011BBB0E1BBDB29300FCEE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BBB0C1BBDB29300FCEE20 /* Main.storyboard */; };
+		011BBB111BBDB29300FCEE20 /* iFav.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB0F1BBDB29300FCEE20 /* iFav.xcdatamodeld */; };
+		011BBB131BBDB29300FCEE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011BBB121BBDB29300FCEE20 /* Assets.xcassets */; };
+		011BBB161BBDB29300FCEE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BBB141BBDB29300FCEE20 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		011BBB001BBDB29300FCEE20 /* iFav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFav.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		011BBB041BBDB29300FCEE20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		011BBB061BBDB29300FCEE20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		011BBB071BBDB29300FCEE20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		011BBB091BBDB29300FCEE20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		011BBB0A1BBDB29300FCEE20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		011BBB0D1BBDB29300FCEE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		011BBB101BBDB29300FCEE20 /* iFav.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iFav.xcdatamodel; sourceTree = "<group>"; };
+		011BBB121BBDB29300FCEE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		011BBB151BBDB29300FCEE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		011BBB171BBDB29300FCEE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		011BBAFD1BBDB29300FCEE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		011BBAF71BBDB29300FCEE20 = {
+			isa = PBXGroup;
+			children = (
+				011BBB021BBDB29300FCEE20 /* iFav */,
+				011BBB011BBDB29300FCEE20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		011BBB011BBDB29300FCEE20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				011BBB001BBDB29300FCEE20 /* iFav.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		011BBB021BBDB29300FCEE20 /* iFav */ = {
+			isa = PBXGroup;
+			children = (
+				011BBB061BBDB29300FCEE20 /* AppDelegate.h */,
+				011BBB071BBDB29300FCEE20 /* AppDelegate.m */,
+				011BBB091BBDB29300FCEE20 /* ViewController.h */,
+				011BBB0A1BBDB29300FCEE20 /* ViewController.m */,
+				011BBB0C1BBDB29300FCEE20 /* Main.storyboard */,
+				011BBB121BBDB29300FCEE20 /* Assets.xcassets */,
+				011BBB141BBDB29300FCEE20 /* LaunchScreen.storyboard */,
+				011BBB171BBDB29300FCEE20 /* Info.plist */,
+				011BBB0F1BBDB29300FCEE20 /* iFav.xcdatamodeld */,
+				011BBB031BBDB29300FCEE20 /* Supporting Files */,
+			);
+			path = iFav;
+			sourceTree = "<group>";
+		};
+		011BBB031BBDB29300FCEE20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				011BBB041BBDB29300FCEE20 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		011BBAFF1BBDB29300FCEE20 /* iFav */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 011BBB1A1BBDB29300FCEE20 /* Build configuration list for PBXNativeTarget "iFav" */;
+			buildPhases = (
+				011BBAFC1BBDB29300FCEE20 /* Sources */,
+				011BBAFD1BBDB29300FCEE20 /* Frameworks */,
+				011BBAFE1BBDB29300FCEE20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iFav;
+			productName = iFav;
+			productReference = 011BBB001BBDB29300FCEE20 /* iFav.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		011BBAF81BBDB29300FCEE20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Luke Madronal";
+				TargetAttributes = {
+					011BBAFF1BBDB29300FCEE20 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 011BBAFB1BBDB29300FCEE20 /* Build configuration list for PBXProject "iFav" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 011BBAF71BBDB29300FCEE20;
+			productRefGroup = 011BBB011BBDB29300FCEE20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				011BBAFF1BBDB29300FCEE20 /* iFav */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		011BBAFE1BBDB29300FCEE20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011BBB161BBDB29300FCEE20 /* LaunchScreen.storyboard in Resources */,
+				011BBB131BBDB29300FCEE20 /* Assets.xcassets in Resources */,
+				011BBB0E1BBDB29300FCEE20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		011BBAFC1BBDB29300FCEE20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011BBB0B1BBDB29300FCEE20 /* ViewController.m in Sources */,
+				011BBB081BBDB29300FCEE20 /* AppDelegate.m in Sources */,
+				011BBB051BBDB29300FCEE20 /* main.m in Sources */,
+				011BBB111BBDB29300FCEE20 /* iFav.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		011BBB0C1BBDB29300FCEE20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				011BBB0D1BBDB29300FCEE20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		011BBB141BBDB29300FCEE20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				011BBB151BBDB29300FCEE20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		011BBB181BBDB29300FCEE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		011BBB191BBDB29300FCEE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		011BBB1B1BBDB29300FCEE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iFav/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LAM.iFav;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		011BBB1C1BBDB29300FCEE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iFav/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LAM.iFav;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		011BBAFB1BBDB29300FCEE20 /* Build configuration list for PBXProject "iFav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011BBB181BBDB29300FCEE20 /* Debug */,
+				011BBB191BBDB29300FCEE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		011BBB1A1BBDB29300FCEE20 /* Build configuration list for PBXNativeTarget "iFav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011BBB1B1BBDB29300FCEE20 /* Debug */,
+				011BBB1C1BBDB29300FCEE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		011BBB0F1BBDB29300FCEE20 /* iFav.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				011BBB101BBDB29300FCEE20 /* iFav.xcdatamodel */,
+			);
+			currentVersion = 011BBB101BBDB29300FCEE20 /* iFav.xcdatamodel */;
+			path = iFav.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 011BBAF81BBDB29300FCEE20 /* Project object */;
+}
