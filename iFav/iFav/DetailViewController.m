@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) AppDelegate               *appDelegate;
 @property (nonatomic, strong) NSManagedObjectContext    *managedObjectContext;
-//@property(nonatomic, weak) IBOutlet UITextField         *firstNameTextField;
+@property(nonatomic, weak) IBOutlet UITextField         *firstNameTextField;
 @property (nonatomic,weak) IBOutlet UITableView         *detailTableView;
 @property (nonatomic,strong) NSArray                    *tableViewCellList;
 
@@ -33,9 +33,6 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    
-    
-    
     ContactTableViewCell *contactCell = (ContactTableViewCell *) [_detailTableView dequeueReusableCellWithIdentifier:@"firstNameCell" ];
     NSString *cellLabel = _tableViewCellList[indexPath.row];
     contactCell.textLabel.text= cellLabel;
@@ -69,21 +66,15 @@
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
-    //    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//    _managedObjectContext = _appDelegate.managedObjectContext;
-//    
-//    
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    _managedObjectContext = _appDelegate.managedObjectContext;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-
     if (_currentPerson != nil) {
     ContactTableViewCell *labelCell = (ContactTableViewCell *) [_detailTableView dequeueReusableCellWithIdentifier:@"firstNameCell"];
-        
         labelCell.firstNameTextField.text = _currentPerson.firstName;
     } else {
         Persons *newPerson = (Persons *)[NSEntityDescription insertNewObjectForEntityForName:@"Persons" inManagedObjectContext:_managedObjectContext];
