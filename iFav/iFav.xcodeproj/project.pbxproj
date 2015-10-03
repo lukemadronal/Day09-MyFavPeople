@@ -14,6 +14,12 @@
 		011BBB111BBDB29300FCEE20 /* iFav.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB0F1BBDB29300FCEE20 /* iFav.xcdatamodeld */; };
 		011BBB131BBDB29300FCEE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011BBB121BBDB29300FCEE20 /* Assets.xcassets */; };
 		011BBB161BBDB29300FCEE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BBB141BBDB29300FCEE20 /* LaunchScreen.storyboard */; };
+		011BBB251BBDB8D500FCEE20 /* Persons+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB1E1BBDB8D500FCEE20 /* Persons+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		011BBB261BBDB8D500FCEE20 /* Persons.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB201BBDB8D500FCEE20 /* Persons.m */; settings = {ASSET_TAGS = (); }; };
+		011BBB271BBDB8D500FCEE20 /* Phone+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB221BBDB8D500FCEE20 /* Phone+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		011BBB281BBDB8D500FCEE20 /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB241BBDB8D500FCEE20 /* Phone.m */; settings = {ASSET_TAGS = (); }; };
+		011BBB2B1BBDB91C00FCEE20 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB2A1BBDB91C00FCEE20 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		011BBB2E1BBDB96200FCEE20 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011BBB2D1BBDB96200FCEE20 /* ContactTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,18 @@
 		011BBB121BBDB29300FCEE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011BBB151BBDB29300FCEE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011BBB171BBDB29300FCEE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		011BBB1D1BBDB8D500FCEE20 /* Persons+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Persons+CoreDataProperties.h"; sourceTree = "<group>"; };
+		011BBB1E1BBDB8D500FCEE20 /* Persons+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Persons+CoreDataProperties.m"; sourceTree = "<group>"; };
+		011BBB1F1BBDB8D500FCEE20 /* Persons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persons.h; sourceTree = "<group>"; };
+		011BBB201BBDB8D500FCEE20 /* Persons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persons.m; sourceTree = "<group>"; };
+		011BBB211BBDB8D500FCEE20 /* Phone+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Phone+CoreDataProperties.h"; sourceTree = "<group>"; };
+		011BBB221BBDB8D500FCEE20 /* Phone+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Phone+CoreDataProperties.m"; sourceTree = "<group>"; };
+		011BBB231BBDB8D500FCEE20 /* Phone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
+		011BBB241BBDB8D500FCEE20 /* Phone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
+		011BBB291BBDB91C00FCEE20 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		011BBB2A1BBDB91C00FCEE20 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		011BBB2C1BBDB96200FCEE20 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		011BBB2D1BBDB96200FCEE20 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,9 @@
 		011BBB021BBDB29300FCEE20 /* iFav */ = {
 			isa = PBXGroup;
 			children = (
+				011BBB2F1BBDB97F00FCEE20 /* Data */,
+				011BBB301BBDB98900FCEE20 /* DetailViewController */,
+				011BBB311BBDB99500FCEE20 /* CustomCell */,
 				011BBB061BBDB29300FCEE20 /* AppDelegate.h */,
 				011BBB071BBDB29300FCEE20 /* AppDelegate.m */,
 				011BBB091BBDB29300FCEE20 /* ViewController.h */,
@@ -80,6 +101,39 @@
 				011BBB041BBDB29300FCEE20 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		011BBB2F1BBDB97F00FCEE20 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				011BBB1D1BBDB8D500FCEE20 /* Persons+CoreDataProperties.h */,
+				011BBB1E1BBDB8D500FCEE20 /* Persons+CoreDataProperties.m */,
+				011BBB1F1BBDB8D500FCEE20 /* Persons.h */,
+				011BBB201BBDB8D500FCEE20 /* Persons.m */,
+				011BBB211BBDB8D500FCEE20 /* Phone+CoreDataProperties.h */,
+				011BBB221BBDB8D500FCEE20 /* Phone+CoreDataProperties.m */,
+				011BBB231BBDB8D500FCEE20 /* Phone.h */,
+				011BBB241BBDB8D500FCEE20 /* Phone.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		011BBB301BBDB98900FCEE20 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				011BBB291BBDB91C00FCEE20 /* DetailViewController.h */,
+				011BBB2A1BBDB91C00FCEE20 /* DetailViewController.m */,
+			);
+			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		011BBB311BBDB99500FCEE20 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				011BBB2C1BBDB96200FCEE20 /* ContactTableViewCell.h */,
+				011BBB2D1BBDB96200FCEE20 /* ContactTableViewCell.m */,
+			);
+			name = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +167,7 @@
 				TargetAttributes = {
 					011BBAFF1BBDB29300FCEE20 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = DMUZX7Q6QX;
 					};
 				};
 			};
@@ -152,7 +207,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011BBB271BBDB8D500FCEE20 /* Phone+CoreDataProperties.m in Sources */,
+				011BBB261BBDB8D500FCEE20 /* Persons.m in Sources */,
+				011BBB2E1BBDB96200FCEE20 /* ContactTableViewCell.m in Sources */,
+				011BBB2B1BBDB91C00FCEE20 /* DetailViewController.m in Sources */,
 				011BBB0B1BBDB29300FCEE20 /* ViewController.m in Sources */,
+				011BBB251BBDB8D500FCEE20 /* Persons+CoreDataProperties.m in Sources */,
+				011BBB281BBDB8D500FCEE20 /* Phone.m in Sources */,
 				011BBB081BBDB29300FCEE20 /* AppDelegate.m in Sources */,
 				011BBB051BBDB29300FCEE20 /* main.m in Sources */,
 				011BBB111BBDB29300FCEE20 /* iFav.xcdatamodeld in Sources */,
@@ -267,10 +328,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iFav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LAM.iFav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -278,10 +342,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iFav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LAM.iFav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
