@@ -17,8 +17,8 @@
 @property (nonatomic, strong) AppDelegate               *appDelegate;
 @property (nonatomic, strong) NSManagedObjectContext    *managedObjectContext;
 @property(nonatomic, weak) IBOutlet UITextField         *firstNameTextField;
-@property (nonatomic,weak) IBOutlet UITableView         *detailTableView;
-@property (nonatomic,strong) NSArray                    *tableViewCellList;
+@property (nonatomic,strong     ) IBOutlet UITableView         *detailTableView;
+@property (nonatomic,strong) NSArray                        *tableViewCellList;
 
 @end
 
@@ -27,20 +27,32 @@
 #pragma mark - TableView Methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    _tableViewCellList = [[NSArray alloc] init];
-    _tableViewCellList=@[@"Name: "];
     return _tableViewCellList.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    ContactTableViewCell *contactCell = (ContactTableViewCell *) [_detailTableView dequeueReusableCellWithIdentifier:@"firstNameCell" ];
+    ContactTableViewCell *contactCell = (ContactTableViewCell *) [_detailTableView dequeueReusableCellWithIdentifier:@"ContactCell" ];
     NSString *cellLabel = _tableViewCellList[indexPath.row];
-    contactCell.textLabel.text= cellLabel;
+    contactCell.cellLabel.text= cellLabel;
     return contactCell;
 }
 
+//if (indexPath.row > 2 ) {
+//    UITableViewCell *basicCell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"BasicCell"];
+//    Timers *currentTime = _timerArray[indexPath.row];
+//    basicCell.textLabel.text = currentTime.timerName;
+//    return basicCell;
+//} else {
+//    
+//    LabelCenterTableViewCell *labelCell = (LabelCenterTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"CenterLabelCell"];
+//    Timers *currentTime = _timerArray[indexPath.row];
+//    labelCell.cellLabel.text= currentTime.timerName;
+//    labelCell.cellSwitch.on=false;
+//    return labelCell;
+//}
+
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44.0;
+    return 109.0;
 }
 
 #pragma mark - Interactivity Methods
@@ -51,8 +63,10 @@
 }
 
 -(IBAction)saveButtonPressed:(id)sender{
-    ContactTableViewCell *labelCell = (ContactTableViewCell *) [_detailTableView dequeueReusableCellWithIdentifier:@"firstNameCell"];
-    _currentPerson.firstName = labelCell.firstNameTextField.text;
+    NSIndexPath *pathZero = [NSIndexPath indexPathForRow:0 inSection:0];
+    ContactTableViewCell *labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    _currentPerson.firstName = labelCell.cellTextField.text;
+    
 //    _currentPerson.dateUpdated = [NSDate date];
 //    _currentPerson.userID = @"User";
     [self saveAndPop];
@@ -69,13 +83,14 @@
     [super viewDidLoad];
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     _managedObjectContext = _appDelegate.managedObjectContext;
+    _tableViewCellList = @[@"First Name;",@"Last Name:"];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (_currentPerson != nil) {
-    ContactTableViewCell *labelCell = (ContactTableViewCell *) [_detailTableView dequeueReusableCellWithIdentifier:@"firstNameCell"];
-        labelCell.firstNameTextField.text = _currentPerson.firstName;
+        
     } else {
         Persons *newPerson = (Persons *)[NSEntityDescription insertNewObjectForEntityForName:@"Persons" inManagedObjectContext:_managedObjectContext];
         _currentPerson = newPerson;

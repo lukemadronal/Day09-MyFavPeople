@@ -11,7 +11,7 @@
 
 @interface ContactTableViewCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel    *personCell;
-@property(nonatomic, weak) IBOutlet UITextField *firstNameTextField;
+@property (nonatomic, weak) IBOutlet UILabel    *cellLabel;
+@property(nonatomic, weak) IBOutlet UITextField *cellTextField;
 
 @end

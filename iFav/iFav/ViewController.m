@@ -32,9 +32,10 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    ContactTableViewCell *contactCell = (ContactTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"personsCell"];
+    UITableViewCell *contactCell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"personsCell"];
     Persons *testPersonBob = _personsList[indexPath.row];
     contactCell.textLabel.text= testPersonBob.firstName;
+    NSLog(@"%@",testPersonBob);
     return contactCell;
 }
 
@@ -65,19 +66,19 @@
     
 }
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    DetailViewController *destController = [segue destinationViewController];
-//    if ([[segue identifier] isEqualToString:@"segueEditPerson"]) {
-//        NSIndexPath *indexPath = [_personsTableView indexPathForSelectedRow];
-//        Persons *currentPerson = _personsList[indexPath.row];
-//        destController.currentPerson = currentPerson;
-//        
-//    } else if ([[segue identifier] isEqualToString:@"segueAddPerson"]) {
-//        destController.currentPerson = nil;
-//        
-//        
-//    }
-//}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *destController = [segue destinationViewController];
+    if ([[segue identifier] isEqualToString:@"segueEditPerson"]) {
+        NSIndexPath *indexPath = [_personsTableView indexPathForSelectedRow];
+        Persons *currentPerson = _personsList[indexPath.row];
+        destController.currentPerson = currentPerson;
+        
+    } else if ([[segue identifier] isEqualToString:@"segueAddPerson"]) {
+        destController.currentPerson = nil;
+        
+        
+    }
+}
 
 #pragma mark - Life Cycle Methods
 
@@ -94,8 +95,8 @@
 - (void)viewWillAppear:(BOOL)animated   {
     [super viewWillAppear:animated];
     //[_personsList addObject:personToAdd];
-    NSLog(@"Count:%li",_personsList.count);
     _personsList = [self fetchTimers];
+    NSLog(@"Count:%li",_personsList.count);
     [_personsTableView reloadData];
     
 }
