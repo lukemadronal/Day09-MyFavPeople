@@ -43,6 +43,20 @@
            return 43.5;
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"Going to delete %li",indexPath.row);
+        Persons *personToDelete = _personsList[indexPath.row];
+        [_managedObjectContext deleteObject:personToDelete];
+        [_appDelegate saveContext];
+        _personsList = [self fetchTimers];
+        [_personsTableView reloadData];
+        
+        
+        
+    }
+}
+
 #pragma mark - Core Data Methods
 
 

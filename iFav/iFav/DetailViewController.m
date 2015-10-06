@@ -73,10 +73,10 @@
 }
 
 -(IBAction)deleteRecord:(id)sender {
-//    NSLog(@"Delete");
-//    [_managedObjectContext deleteObject:_currentTimer];
-//    [self saveAndPop];
-//    
+    NSLog(@"Delete");
+    [_managedObjectContext deleteObject:_currentPerson];
+    [self saveAndPop];
+    
 }
 
 - (void)viewDidLoad {
