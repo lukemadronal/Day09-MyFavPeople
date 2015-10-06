@@ -34,7 +34,26 @@
     ContactTableViewCell *contactCell = (ContactTableViewCell *) [_detailTableView dequeueReusableCellWithIdentifier:@"ContactCell" ];
     NSString *cellLabel = _tableViewCellList[indexPath.row];
     contactCell.cellLabel.text= cellLabel;
+    if (indexPath.row == 0)
+        contactCell.prevCellLabel.text = _currentPerson.firstName;
+    if (indexPath.row == 1)
+        contactCell.prevCellLabel.text = _currentPerson.lastName;
+    if (indexPath.row == 2)
+        contactCell.prevCellLabel.text = _currentPerson.skypeName;
+    if (indexPath.row == 3)
+        contactCell.prevCellLabel.text = _currentPerson.twitterName;
+    if (indexPath.row == 4)
+        contactCell.prevCellLabel.text = _currentPerson.addressStreet;
+    if (indexPath.row == 5)
+        contactCell.prevCellLabel.text = _currentPerson.addressState;
+    if (indexPath.row == 6)
+        contactCell.prevCellLabel.text = _currentPerson.addressZip;
+    if (indexPath.row == 7)
+        contactCell.prevCellLabel.text = _currentPerson.email;
+    if (indexPath.row == 8)
+        contactCell.prevCellLabel.text = _currentPerson.emailType;
     return contactCell;
+    
 }
 
 //if (indexPath.row > 2 ) {
@@ -63,17 +82,89 @@
 }
 
 -(IBAction)saveButtonPressed:(id)sender{
+    //first Name
     NSIndexPath *pathZero = [NSIndexPath indexPathForRow:0 inSection:0];
     ContactTableViewCell *labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
-    _currentPerson.firstName = labelCell.cellTextField.text;
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.firstName;
+    } else {
+        _currentPerson.firstName = labelCell.cellTextField.text;
+    }
+    //Last Name
+    pathZero = [NSIndexPath indexPathForRow:1 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.lastName;
+    } else {
+        _currentPerson.lastName = labelCell.cellTextField.text;
+    }
+    //Skype Name
+    pathZero = [NSIndexPath indexPathForRow:2 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.skypeName;
+    } else {
+        _currentPerson.skypeName = labelCell.cellTextField.text;
+    }
+    //Twitter Name
+    pathZero = [NSIndexPath indexPathForRow:3 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.twitterName;
+    } else {
+        _currentPerson.twitterName = labelCell.cellTextField.text;
+    }
+    //
+    pathZero = [NSIndexPath indexPathForRow:4 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.addressStreet;
+    } else {
+        _currentPerson.addressStreet = labelCell.cellTextField.text;
+    }
     
+    pathZero = [NSIndexPath indexPathForRow:5 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.addressState;
+    } else {
+        _currentPerson.addressState = labelCell.cellTextField.text;
+    }
+    
+    pathZero = [NSIndexPath indexPathForRow:6 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.addressZip;
+    } else {
+        _currentPerson.addressZip = labelCell.cellTextField.text;
+    }
+    
+    pathZero = [NSIndexPath indexPathForRow:7 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.email;
+    } else {
+        _currentPerson.email = labelCell.cellTextField.text;
+    }
+    pathZero = [NSIndexPath indexPathForRow:8 inSection:0];
+    labelCell = (ContactTableViewCell *) [_detailTableView cellForRowAtIndexPath:pathZero];
+    if ([labelCell.cellTextField.text isEqualToString:@""]) {
+        labelCell.cellLabel.text = _currentPerson.emailType;
+    } else {
+        _currentPerson.emailType = labelCell.cellTextField.text;
+    }
+
+
+
+
+
 //    _currentPerson.dateUpdated = [NSDate date];
 //    _currentPerson.userID = @"User";
     [self saveAndPop];
 }
 
 -(IBAction)deleteRecord:(id)sender {
-    NSLog(@"Delete");
+    //NSLog(@"Delete");
     [_managedObjectContext deleteObject:_currentPerson];
     [self saveAndPop];
     
@@ -83,7 +174,21 @@
     [super viewDidLoad];
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     _managedObjectContext = _appDelegate.managedObjectContext;
-    _tableViewCellList = @[@"First Name;",@"Last Name:"];
+//    @dynamic category;
+//    @dynamic imageName;
+//    @dynamic firstName;
+//    @dynamic lastName;
+//    @dynamic role;
+//    @dynamic skypeName;
+//    @dynamic twitterName;
+//    @dynamic addressStreet;
+//    @dynamic addressState;
+//    @dynamic addressZip;
+//    @dynamic email;
+//    @dynamic emailType;
+//    @dynamic relationshipPersontoPhones;
+
+    _tableViewCellList = @[@"First Name;",@"Last Name:", @"Skype Name:",@"Twitter Name",@"Street Adress", @"City,State", @"Zip Code",@"Email Adress:",@"Email Type"];
     
 }
 

@@ -13,5 +13,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel    *cellLabel;
 @property(nonatomic, weak) IBOutlet UITextField *cellTextField;
+@property (nonatomic, weak) IBOutlet UILabel    *prevCellLabel;
 
 @end

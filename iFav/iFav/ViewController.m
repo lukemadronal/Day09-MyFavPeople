@@ -17,7 +17,7 @@
 @property (nonatomic,strong) NSArray                    *personsList;
 @property (nonatomic, strong) AppDelegate               *appDelegate;
 @property (nonatomic, strong) NSManagedObjectContext    *managedObjectContext;
-@property (nonatomic,weak) IBOutlet UITableView         *personsTableView;
+
 
 @end
 
@@ -35,7 +35,8 @@
     UITableViewCell *contactCell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"personsCell"];
     Persons *testPersonBob = _personsList[indexPath.row];
     contactCell.textLabel.text= testPersonBob.firstName;
-    NSLog(@"%@",testPersonBob);
+    contactCell.detailTextLabel.text = testPersonBob.lastName;
+    //NSLog(@"%@",testPersonBob);
     return contactCell;
 }
 
@@ -45,7 +46,7 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSLog(@"Going to delete %li",indexPath.row);
+        //NSLog(@"Going to delete %li",indexPath.row);
         Persons *personToDelete = _personsList[indexPath.row];
         [_managedObjectContext deleteObject:personToDelete];
         [_appDelegate saveContext];
@@ -110,7 +111,7 @@
     [super viewWillAppear:animated];
     //[_personsList addObject:personToAdd];
     _personsList = [self fetchTimers];
-    NSLog(@"Count:%li",_personsList.count);
+    //NSLog(@"Count:%li",_personsList.count);
     [_personsTableView reloadData];
     
 }

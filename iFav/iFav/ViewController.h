@@ -10,5 +10,7 @@
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
+@property (nonatomic,weak) IBOutlet UITableView         *personsTableView;
+
 @end
 
